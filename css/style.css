@@ -21,18 +21,9 @@ li {
     box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.1);
     padding: 1% 2%;
     position: fixed;
-    z-index: 100;
+    z-index: 1;
+    background-color: white;
 }
-
-
-.apresentacao{
-    width: 90%;
-    position: relative;
-    top: 100px;
-    padding: 5%;
-    z-index: 0;
-}
-
 
 .logo{
     height: 80px;
@@ -68,12 +59,76 @@ li {
     transition: all 0.4s linear;
 }
 
+.apresentacao{
+    width: 98%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    top: 100px;
+    padding: 5% 1%;
+}
+
 #imgApresentacao{
     width: 40%;
     position: relative;
     left:-50%;
     transition: all 1s linear;
 }
+
 #imgApresentacao img{
     width:100%
+}
+
+.textoApresentacao{
+    font-family: "Maven Pro";
+    font-weight: 500;
+    font-size: 1.5em;
+    position: relative;
+    top:-250px;
+    text-align: center;
+    transition: all 1s linear;
+}
+
+#minhaApresentacao{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#minhaApresentacao img{
+    width: 80%;
+    border-radius: 100%;
+}
+#minhaApresentacao .icons{
+    margin-top: 5px;
+}
+
+.icons i{
+    margin: 0 5px;
+    transition: all 0.4s linear;
+}
+.icons a:first-of-type:hover i, .icons a:last-of-type:hover i{color: #4267db;
+}
+.icons a:nth-child(3):hover i{color: inherit;}
+.icons a:hover i{
+    transform: scale(1.4);
+    color: #2bd247;
+    transition: all 0.4s linear;
+}
+
+
+/*Media Queries*/
+@media (max-width:700px){
+    .apresentacao{
+        flex-direction: column;
+        align-items: center;
+    }
+    #imgApresentacao{
+        display: none;
+    }   
+    #minhaApresentacao{
+        width: 80%;
+    }
 }
