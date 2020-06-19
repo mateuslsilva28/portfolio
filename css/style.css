@@ -119,9 +119,12 @@ li {
 	z-index: 1;
 }
 
-.textoApresentacao div{transition: all 0.4s linear;}
+.textoApresentacao div{
+    transition: all 0.4s linear;
+    -webkit-animation: botao 600ms alternate infinite ease;
+}
 
-.textoApresentacao div:hover{transform: scale(1.1);}
+.textoApresentacao div:hover{-webkit-animation: none;transform: scale(1.1);}
 
 .textoApresentacao a:hover {
     background: linear-gradient(118.1deg, #13F1FC -2.02%, #26a0d9 129.72%);
@@ -151,10 +154,12 @@ li {
 }
 .icons a:nth-child(3):hover i{color: inherit;}
 .icons a:hover i{
-    transform: scale(1.4);
     color: #2bd247;
-    transition: all 0.4s linear;
+    -webkit-animation: icones 600ms alternate infinite ease;
 }
+
+@-webkit-keyframes botao{from{-webkit-transform: scale(1);}to{-webkit-transform: scale(1.1);}}
+@-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
 
 /*Media Queries*/
 @media (max-width:700px){
