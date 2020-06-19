@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+}
+
+a{text-decoration: none; color: inherit;}
+ul{margin: -5px 0 0 0;}
+li {
+    list-style: none;
+}
+
+
+#topo {
+    width: 96%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.1);
+    padding: 1% 2%;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.apresentacao{
+    width: 90%;
+    position: relative;
+    top: 100px;
+    padding: 5%;
+    z-index: 0;
+}
+
+
+.logo{
+    height: 80px;
+}
+
+.logo img{
+    height: 100%;
+    transition: all 0.4s linear;
+}
+
+.logo img:hover{
+    transition: all 0.4s linear;  
+    transform: rotate(2deg) scale(1.1) skew(3deg, 3deg);
+}
+
+.menu {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.menu li{
+    transition: all 0.4s linear;
+    display: inline;
+    margin: 0 5px;
+    font-weight: 400;
+    color: rgb(71, 71, 71);
+    font-size: 1.2em;
+}
+
+.menu li:hover{
+    border-bottom: 0.4px solid #000;
+    color: #26a0d9;
+    font-size: 1.3em;
+    transition: all 0.4s linear;
+}
+
+#imgApresentacao{
+    width: 40%;
+    position: relative;
+    left:-50%;
+    transition: all 1s linear;
+}
+#imgApresentacao img{
+    width:100%
+}
