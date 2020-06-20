@@ -11,7 +11,6 @@ li {
     list-style: none;
 }
 
-
 #topo {
     width: 96%;
     height: 100px;
@@ -53,10 +52,49 @@ li {
 }
 
 .menu li:hover{
-    border-bottom: 0.4px solid #000;
     color: #26a0d9;
     font-size: 1.3em;
     transition: all 0.4s linear;
+}
+
+.hamburguer{
+    display: none!important;
+    cursor: pointer;
+}
+
+.menuMobile{
+    background-color: white;
+    position: absolute;
+    top:-700%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 1s linear;
+}
+.menuMobile li {
+    text-align: center;
+    font-family: "Maven Pro";
+    font-size: 1.7em;
+    margin: 5% 0;
+    transition: all 0.4s linear;
+}
+
+.menuMobile li:hover{
+    color: #26a0d9;
+    font-size: 1.9em;
+    transition: all 0.4s linear;
+}
+
+.menuMobile img{
+    width: 70%;
+}
+.menuMobile .close{
+    align-self: flex-end;
+    position: relative;
+    right: 3%;
+    top:3%;
+    cursor: pointer;
 }
 
 .apresentacao{
@@ -122,9 +160,10 @@ li {
 .textoApresentacao div{
     transition: all 0.4s linear;
     -webkit-animation: botao 600ms alternate infinite ease;
+    -moz-animation: botao 600ms alternate infinite ease;
 }
 
-.textoApresentacao div:hover{-webkit-animation: none;transform: scale(1.1);}
+.textoApresentacao div:hover{transform: scale(1.1);}
 
 .textoApresentacao a:hover {
     background: linear-gradient(118.1deg, #13F1FC -2.02%, #26a0d9 129.72%);
@@ -156,12 +195,20 @@ li {
 .icons a:hover i{
     color: #2bd247;
     -webkit-animation: icones 600ms alternate infinite ease;
+    -moz-animation: icones 600ms alternate infinite ease;;
 }
 
 @-webkit-keyframes botao{from{-webkit-transform: scale(1);}to{-webkit-transform: scale(1.1);}}
+@-moz-keyframes botao{from{-webkit-transform: scale(1);}to{-webkit-transform: scale(1.1);}}
 @-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+@-moz-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
 
 /*Media Queries*/
+@media (max-width:767px){
+    .menu{display: none;}
+    .hamburguer{display: block!important;}
+}
+
 @media (max-width:700px){
     .apresentacao{
         flex-direction: column;
