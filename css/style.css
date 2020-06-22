@@ -61,6 +61,7 @@ li {
 .menuMobile{
     background-color: #fdfcfc;
     position: absolute;
+    z-index: 10;
     top:-700%;
     left: 0;
     display: flex;
@@ -206,7 +207,6 @@ main{
 #sobre h2, #habilidades h2{
     text-align: center;
 }
-
 .containerCards{
     width: 100%;
     display: flex;
@@ -214,7 +214,7 @@ main{
     font-size:1.1em;
     height: auto;
     position: relative;
-    right: -100%;
+    left: -100%;
     transition: all 1.2s linear!important;
 }
 .containerCards div h2{
@@ -240,10 +240,7 @@ main{
 .containerCards .cardImagens img{
     width: 31%;
 }
-
-@-webkit-keyframes botao{from{-webkit-transform: scale(1);}to{-webkit-transform: scale(1.1);}}
-@-moz-keyframes botao{from{-webkit-transform: scale(1);}to{-webkit-transform: scale(1.1);}}
-@-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+/*@-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
 @-moz-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
 @-webkit-keyframes logo{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.1);}}
 @-moz-keyframes logo{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.1);}}

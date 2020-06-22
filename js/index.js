@@ -23,13 +23,14 @@ setTimeout(function(){
 
 setInterval(function(){
     var posicao = $(window).scrollTop()
+    console.log(posicao)
     if(posicao > 258)ilustracao1.css("left", "-50%")
     else setTimeout(function(){
         ilustracao1.css("left", "0%")
     }, 600) 
-    if(posicao>319) cards.css("right","0%")
-    else cards.css("right", "-100%")
-}, 100)
+    if(posicao>330) cards.css({"left":"0%"})
+    else cards.css("left", "-100%")
+}, 600)
 
 
 
