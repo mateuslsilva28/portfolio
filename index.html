@@ -16,7 +16,7 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#">Portfólio</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
@@ -25,7 +25,7 @@
         <nav class="menuMobile">
             <i class="close fa-2x fas fa-times"></i>
             <ul>
-                <li><a><img src="imagens/logo.png"></a></li>
+                <li><a href="index.html"><img src="imagens/logo.png"></a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Portfólio</a></li>
                 <li><a href="#">Contato</a></li>
@@ -38,28 +38,66 @@
             </nav>            
         </nav>
     </header>
-    <section class="apresentacao">
-        <div id="imgApresentacao">
-            <img src="imagens/code.svg">
-        </div>
-        <div class="textoApresentacao">
-            <p>Olá, eu sou Mateus</p>
-            <p>Sou Desenvolvedor Web</p>
-            <div>
-            <a href="#">Entre em contato</a>
-            
+    <main>
+        <section class="apresentacao">
+            <div id="imgApresentacao">
+                <img src="imagens/code.svg">
             </div>
-        </div>
-        <div id="minhaApresentacao">
-            <img src="imagens/eu.png">
-            <nav class="icons">
-                <a href="https://www.facebook.com/mateus.silva.560" target="_blank"><i class="fa fa-2x fa-facebook-square"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=5511975671185&text=&source=&data=&app_absent=" target="_blank"><i class="fa fa-2x fa-whatsapp"></i></a>
-                <a href="https://github.com/mateuslsilva28" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
-                <a href="https://www.linkedin.com/in/mateus-silva-a386b5199/" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
-            </nav>
-        </div>
-    </section>
+            <div class="textoApresentacao">
+                <p>Olá, eu sou Mateus</p>
+                <p>Sou Desenvolvedor Web</p>
+                <div>
+                    <a href="#">Entre em contato</a>
+                </div>
+            </div>
+            <div id="minhaApresentacao">
+                <img src="imagens/eu.png">
+                <nav class="icons">
+                    <a href="https://www.facebook.com/mateus.silva.560" target="_blank"><i class="fa fa-2x fa-facebook-square"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5511975671185&text=&source=&data=&app_absent=" target="_blank"><i class="fa fa-2x fa-whatsapp"></i></a>
+                    <a href="https://github.com/mateuslsilva28" target="_blank"><i class="fa fa-2x fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/mateus-silva-a386b5199/" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
+                </nav>
+            </div>
+        </section>
+        <section id="sobre" class="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Eu sou Mateus, tenho 17 anos, sou de São Paulo, sou Desenvolvedor Web e transformo designs em páginas para a internet.</p>
+
+            <p>Tenho um bom conhecimento em Design Web Responsivo, e estudo diariamente para adquirir novos conhecimentos. Procuro sempre aprender algo novo a cada dia, assim me capacitando mais para poder desenvolver sites modernos e interativos.</p>
+        </section>
+        <section id="habilidades" class="habilidades">
+            <div class="title">
+                <h2>Habilidades</h2>
+            </div>
+            <section class="containerCards">
+                <div class="card">
+                    <h2>Responsividade</h2>
+                    <div class="cardImagens">
+                        <img src="imagens/linguagens/html.png">
+                        <img src="imagens/linguagens/css.png">
+                        <img src="imagens/linguagens/js.png">
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Frameworks</h2>
+                    <div class="cardImagens">
+                        <img src="imagens/linguagens/bootstrap.png">
+                        <img src="imagens/linguagens/materialize.png">
+                        <img src="imagens/linguagens/jquery.png">
+                    </div>
+                </div>
+                <div class="card"> 
+                    <h2>Integração com Banco</h2>
+                    <div class="cardImagens">
+                        <img src="imagens/linguagens/csharp.png">
+                        <img src="imagens/linguagens/sqlserver.png">
+                        <img src="imagens/linguagens/mysql.png">
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/index.js"></script>
 </body>

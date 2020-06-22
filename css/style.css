@@ -3,6 +3,8 @@
 body{
     margin:0;
     padding:0;
+    font-family: 'Maven Pro';
+    overflow-x: hidden;
 }
 
 a{text-decoration: none; color: inherit;}
@@ -30,12 +32,6 @@ li {
 
 .logo img{
     height: 100%;
-    transition: all 0.4s linear;
-}
-
-.logo img:hover{
-    transition: all 0.4s linear;  
-    transform: rotate(2deg) scale(1.1) skew(3deg, 3deg);
 }
 
 .menu {
@@ -63,9 +59,10 @@ li {
 }
 
 .menuMobile{
-    background-color: white;
+    background-color: #fdfcfc;
     position: absolute;
     top:-700%;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,6 +85,7 @@ li {
 
 .menuMobile img{
     width: 70%;
+    -webkit-animation: infinite alternate logo 2500ms;
 }
 .menuMobile .close{
     align-self: flex-end;
@@ -97,12 +95,15 @@ li {
     cursor: pointer;
 }
 
+main{
+    position: relative;
+    top: 100px;
+}
+
 .apresentacao{
     width: 98%;
-    position: relative;
     display: flex;
     justify-content: space-between;
-    top: 100px;
     padding: 5% 1%;
 }
 
@@ -198,12 +199,78 @@ li {
     -moz-animation: icones 600ms alternate infinite ease;;
 }
 
+#sobre, #habilidades{
+    padding: 0 2%;
+    font-size:1.3em;
+}
+#sobre h2, #habilidades h2{
+    text-align: center;
+}
+
+.containerCards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size:1.1em;
+    height: auto;
+    position: relative;
+    right: -100%;
+    transition: all 1.2s linear!important;
+}
+.containerCards div h2{
+    color: #26a0d9;
+}
+
+.containerCards .card{
+    width: 33%;
+    font-size: 0.8em;
+    margin: 0 15px;
+    transition: all 0.4s linear;
+}
+
+.containerCards .card:hover{
+    box-shadow: 2px 3px 15px #26a0d9;
+    transition: all 0.4s linear;
+}
+
+.containerCards .cardImagens{
+    width: 100%;
+}
+
+.containerCards .cardImagens img{
+    width: 31%;
+}
+
 @-webkit-keyframes botao{from{-webkit-transform: scale(1);}to{-webkit-transform: scale(1.1);}}
 @-moz-keyframes botao{from{-webkit-transform: scale(1);}to{-webkit-transform: scale(1.1);}}
 @-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
 @-moz-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+@-webkit-keyframes logo{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.1);}}
+@-moz-keyframes logo{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.1);}}
 
 /*Media Queries*/
+@media (max-width:800px){
+    .containerCards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 80%!important;
+        margin: 10px 0!important;
+    }
+}
+
+@media (max-width:500px){
+    .cardImagens{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cardImagens img{
+        width: 55%!important;
+    }
+}
+
 @media (max-width:767px){
     .menu{display: none;}
     .hamburguer{display: block!important;}

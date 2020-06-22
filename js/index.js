@@ -1,7 +1,8 @@
 const ilustracao1 = $("#imgApresentacao")
 const menu = $(".hamburguer");
 const mobile = $(".menuMobile");
-const fechar = $(".close")
+const fechar = $(".close") 
+const cards = $(".containerCards")
 let largura, altura;
 
 setInterval(() => {
@@ -26,4 +27,13 @@ setInterval(function(){
     else setTimeout(function(){
         ilustracao1.css("left", "0%")
     }, 600) 
+    if(posicao>319) cards.css("right","0%")
+    else cards.css("right", "-100%")
 }, 100)
+
+
+
+
+
+
+
