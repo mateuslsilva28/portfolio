@@ -9,9 +9,7 @@ body{
 
 a{text-decoration: none; color: inherit;}
 ul{margin: -5px 0 0 0;}
-li {
-    list-style: none;
-}
+li {list-style: none;}
 
 #topo {
     width: 96%;
@@ -26,16 +24,15 @@ li {
     background-color: white;
 }
 
-.logo{
-    height: 80px;
-}
+.logo{height: 80px;}
 
-.logo img{
-    height: 100%;
-}
+.logo img{height: 100%;}
 
 .menu {
     font-family: 'Maven Pro', sans-serif;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
 }
 
 .menu li{
@@ -52,11 +49,22 @@ li {
     font-size: 1.3em;
     transition: all 0.4s linear;
 }
+.menu .icons{margin:15px 0 15px 0}
+.menu i{cursor: pointer;}
 
-.hamburguer{
-    display: none!important;
-    cursor: pointer;
+.aumentaDiminui{
+    display: none;
+    position: relative;
+    left: 10%;
 }
+
+.mobile{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mobile .icons{margin: 15px 0 15px 0; cursor: pointer;}
 
 .menuMobile{
     background-color: #fdfcfc;
@@ -115,9 +123,7 @@ main{
     transition: all 1s linear;
 }
 
-#imgApresentacao img{
-    width:100%
-}
+#imgApresentacao img{width:100%}
 
 .textoApresentacao{
     font-family: "Maven Pro";
@@ -167,9 +173,7 @@ main{
 
 .textoApresentacao div:hover{transform: scale(1.1);}
 
-.textoApresentacao a:hover {
-    background: linear-gradient(118.1deg, #13F1FC -2.02%, #26a0d9 129.72%);
-}
+.textoApresentacao a:hover {background: linear-gradient(118.1deg, #13F1FC -2.02%, #26a0d9 129.72%);}
 
 #minhaApresentacao{
     width: 30%;
@@ -183,16 +187,13 @@ main{
     width: 80%;
     border-radius: 100%;
 }
-#minhaApresentacao .icons{
-    margin-top: 5px;
-}
+#minhaApresentacao .icons{margin-top: 5px;}
 
 .icons i{
     margin: 0 5px;
     transition: all 0.4s linear;
 }
-.icons a:first-of-type:hover i, .icons a:last-of-type:hover i{color: #4267db;
-}
+.icons a:first-of-type:hover i, .icons a:last-of-type:hover i{color: #4267db;}
 .icons a:nth-child(3):hover i{color: inherit;}
 .icons a:hover i{
     color: #2bd247;
@@ -214,12 +215,10 @@ main{
     font-size:1.1em;
     height: auto;
     position: relative;
-    left: -100%;
+    left: -120%;
     transition: all 1.2s linear!important;
 }
-.containerCards div h2{
-    color: #26a0d9;
-}
+.containerCards div h2{color: #26a0d9;}
 
 .containerCards .card{
     width: 33%;
@@ -233,15 +232,13 @@ main{
     transition: all 0.4s linear;
 }
 
-.containerCards .cardImagens{
-    width: 100%;
-}
+.containerCards .cardImagens{ width: 100%;}
+.containerCards .cardImagens img{width: 31%;}
 
-.containerCards .cardImagens img{
-    width: 31%;
-}
-/*@-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+@-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
 @-moz-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+@-webkit-keyframes botao{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+@-moz-keyframes botao{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
 @-webkit-keyframes logo{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.1);}}
 @-moz-keyframes logo{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.1);}}
 
@@ -270,7 +267,7 @@ main{
 
 @media (max-width:767px){
     .menu{display: none;}
-    .hamburguer{display: block!important;}
+    .mobile{display: flex!important;}
 }
 
 @media (max-width:700px){

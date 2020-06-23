@@ -12,21 +12,43 @@
 <body>
     <header id="topo">
         <div class="logo">
-            <a href="index.html"><img src="imagens/logo.png" alt="Mateus Silva | Desenvolvedor Web" title="Mateus Silva | Desenvolvedor Web"></a>
+            <a href="index.html"><img class="logo" src="imagens/logoPreta.png" alt="Mateus Silva | Desenvolvedor Web" title="Mateus Silva | Desenvolvedor Web"></a>
         </div>
         <nav class="menu">
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#">Portfólio</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
+            <div class="icons">
+                <a href="#apresentacao"><i class="fas fa-lg fa-home"></i></a>
+                <i class="fas fa-lg fa-moon"></i>
+                <i class="fas fa-lg fa-font"></i>
+            </div>
+            <div class="aumentaDiminui">
+                <i class="fas fa-lg fa-minus"></i>
+                <i class="fas fa-lg fa-plus"></i>
+            </div>
         </nav>
-        <i class="hamburguer fa-2x fas fa-bars"></i>
+        <nav class="mobile">
+            <i class="hamburguer fa-2x fas fa-bars"></i>
+            <div class="icons">
+                <a href="#apresentacao"><i class="fas fa-lg fa-home"></i></a>
+                <i class="fas fa-lg fa-moon"></i>
+                <i class="fas fa-lg fa-font"></i>
+            </div>
+            <div class="aumentaDiminui">
+                <i class="fas fa-lg fa-minus"></i>
+                <i class="fas fa-lg fa-plus"></i>
+            </div>
+        </nav>
         <nav class="menuMobile">
             <i class="close fa-2x fas fa-times"></i>
             <ul>
-                <li><a href="index.html"><img src="imagens/logo.png"></a></li>
+                <li><a href="index.html"><img class="logo" src="imagens/logoPreta.png"></a></li>
                 <li><a href="#">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#">Portfólio</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
@@ -39,7 +61,7 @@
         </nav>
     </header>
     <main>
-        <section class="apresentacao">
+        <section id="apresentacao" class="apresentacao">
             <div id="imgApresentacao">
                 <img src="imagens/code.svg">
             </div>
