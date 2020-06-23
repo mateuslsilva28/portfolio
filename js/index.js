@@ -1,13 +1,13 @@
 const ilustracao1 = $("#imgApresentacao")
 const menu = $(".hamburguer");
 const mobile = $(".menuMobile");
-const fechar = $(".close") 
+const close = $(".close") 
 const cards = $(".containerCards")
-let mudarCor = $(".fa-moon");
+let sunMoon = $(".fa-moon");
 const background = "background-color"
-const corPreta = "black"
-const corBranca = "white"
-let largura, altura;
+const blackColor = "black"
+const whiteColor = "white"
+let width, height;
 
 trocaCor();
 $(".fa-font").click(()=>{
@@ -35,39 +35,43 @@ function alteraTamanho(){
 }
 
 function trocaCor(){
-    mudarCor.click(()=>{
-        mudarCor.removeClass("fa-moon")
-        mudarCor.addClass("fa-sun")
-        $("body").css({background:corPreta, "color":corBranca})
-        $("header").css({background: corPreta, "box-shadow":"1px 1px 4px 1px rgba(255,255,255,0.3)"})
-        $(".logo").attr("src", "imagens/logoBranco.png")
-        $("li").css("color", corBranca)
-        $(".menuMobile").css(background, corPreta)
-        $(".card").css(background, corBranca)
-        mudarCor = $(".fa-sun")
-        mudarCor.click(()=>{
-            mudarCor.removeClass("fa-sun")
-            mudarCor.addClass("fa-moon")
-            $("body").css({background:corBranca, "color":corPreta})
-            $("header").css({background: corBranca,"box-shadow":"1px 1px 4px 1px rgba(0,0,0,0.1)"})
-            $(".logo").attr("src", "imagens/logoPreta.png")
-            $("li").css("color", corPreta)
+    sunMoon.click(()=>{
+        sunMoon.removeClass("fa-moon")
+        sunMoon.addClass("fa-sun")
+        $("body").css({background:blackColor, "color":whiteColor})
+        $("header").css({background: blackColor, "box-shadow":"1px 1px 4px 1px rgba(255,255,255,0.3)"})
+        $(".logo").attr("src", "imagens/logoBranco.webp")
+        $("li").css("color", whiteColor)
+        $(".menuMobile").css(background, blackColor)
+        $(".cls-5, .cls-9").css("fill", "#6594f8")
+        $(".cls-36").css("fill", whiteColor);
+        $(".card").css(background, whiteColor)
+        sunMoon = $(".fa-sun")
+        sunMoon.click(()=>{
+            sunMoon.removeClass("fa-sun")
+            sunMoon.addClass("fa-moon")
+            $("body").css({background:whiteColor, "color":blackColor})
+            $("header").css({background: whiteColor,"box-shadow":"1px 1px 4px 1px rgba(0,0,0,0.1)"})
+            $(".logo").attr("src", "imagens/logoPreta.webp")
+            $("li").css("color", blackColor)
             $('.menuMobile').css(background, "inherit")
+            $(".cls-5, .cls-9").css("fill", "#ffce44")
+            $(".cls-36").css("fill", blackColor);
             $(".card").css(background, "inherit")
-            mudarCor = $(".fa-moon")
+            sunMoon = $(".fa-moon")
             trocaCor()
         })
     })
 }
 
 setInterval(() => {
-    largura = $(window).width();
-    altura = $(window).height();
+    width = $(window).width();
+    height = $(window).height();
     menu.click(function(){
-        mobile.css({"width":largura,"height":altura})
+        mobile.css({"width":width,"height":height})
         mobile.css({"top":"0%"})
     })
-    fechar.click(function(){
+    close.click(function(){
         mobile.css({"top":"-700%"})
     })    
 }, 700);
