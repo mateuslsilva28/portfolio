@@ -10,6 +10,7 @@ body{
 a{text-decoration: none; color: inherit;}
 ul{margin: -5px 0 0 0;}
 li {list-style: none;}
+i{cursor:pointer}
 
 #topo {
     width: 96%;
@@ -29,6 +30,7 @@ aside{
     right: 0.2%;
     display: flex;
     flex-direction: column;
+    z-index: 3;
 }
 aside i{
     margin: 10px 0;
@@ -60,7 +62,6 @@ aside i{
     transition: all 0.4s linear;
 }
 .menu .icons{margin:15px 0 15px 0}
-.menu i{cursor: pointer;}
 
 .aumentaDiminui{display: none;}
 
@@ -193,19 +194,19 @@ main{
     margin: 0 5px;
     transition: all 0.4s linear;
 }
-.icons a:first-of-type:hover i, .icons a:last-of-type:hover i{color: #4267db;}
-.icons a:nth-child(3):hover i{color: inherit;}
-.icons a:hover i{
-    color: #2bd247;
+.icons i:hover{    
     -webkit-animation: icones 600ms alternate infinite ease;
-    -moz-animation: icones 600ms alternate infinite ease;;
+    -moz-animation: icones 600ms alternate infinite ease;
 }
+.iconsColoridos a:first-of-type:hover i, .iconsColoridos a:last-of-type:hover i{color: #4267db;}
+.iconsColoridos a:nth-child(3):hover i{color: inherit;}
+.iconsColoridos a:hover i{color: #2bd247;}
 
-#sobre, #habilidades{
+#sobre, #habilidades, #projetos{
     padding: 0 2%;
     font-size:1.3em;
 }
-#sobre h2, #habilidades h2{
+#sobre h2, #habilidades, #projetos h2{
     text-align: center;
 }
 .containerCards{
@@ -220,10 +221,16 @@ main{
 }
 .containerCards div h2{color: #26a0d9;}
 
+.containerCards p{text-align:center}
+
 .containerCards .card{
     width: 33%;
     font-size: 0.8em;
     margin: 0 15px;
+}
+
+.containerCards .card, .cardProjeto{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.4s linear;
 }
 
@@ -235,6 +242,64 @@ main{
 .containerCards .cardImagens{ width: 100%;}
 .containerCards .cardImagens img{width: 31%;}
 
+.gridProjetos{
+    width: 100%;
+    height: 700px;
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cardProjeto{
+    position: relative;
+    width: 90%;
+    translate: (-50%,-50%);
+    margin: 10px;
+    overflow: hidden;
+}
+
+.areaImg, .areaText{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    transition: 1.8s;
+}
+.cardProjeto:nth-of-type(1) .areaImg{background-image: url("../imagens/projetos/1.webp");}
+.cardProjeto:nth-of-type(2) .areaImg{background-image: url("../imagens/projetos/2.webp");}
+.cardProjeto:nth-of-type(3) .areaImg{background-image: url("../imagens/projetos/3.webp");}
+.cardProjeto:nth-of-type(4) .areaImg{background-image: url("../imagens/projetos/4.webp");}
+.areaImg{
+    background-size: cover;
+    background-position: top left;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.areaText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background: linear-gradient(to top, #26a0d9 -2.02%, #13F1FC 129.72%);
+    top:0;
+    left: 100%;
+    padding:10px;
+    color: #fdfcfc;
+}
+
+.cardProjeto:hover .areaImg{
+    top:0;
+    left:-100%;
+    transition: 1.8s;
+}
+.cardProjeto:hover .areaText{
+    top: 0;
+    left:0;
+    transition: 1.8s;
+}
+
 @-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
 @-moz-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
 @-webkit-keyframes botao{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
@@ -243,6 +308,16 @@ main{
 @-moz-keyframes logo{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.1);}}
 
 /*Media Queries*/
+@media (max-width:900px){
+    .gridProjetos{
+        grid-template-columns: 1fr;
+    }
+    .cardProjeto{
+        width: 96%;
+        height: 400px;
+        margin: 50px 0;
+    }
+}
 @media (max-width:800px){
     .containerCards{
         flex-direction: column;

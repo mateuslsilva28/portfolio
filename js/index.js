@@ -1,8 +1,10 @@
 const ilustracao1 = $("#imgApresentacao")
 const menu = $(".hamburguer");
 const mobile = $(".menuMobile");
+const itensMobile = $(".menuMobile li")
 const close = $(".close") 
 const cards = $(".containerCards")
+const projetos = $(".cardProjeto")
 let sunMoon = $(".fa-moon");
 const background = "background-color"
 const blackColor = "black"
@@ -21,16 +23,15 @@ function alteraTamanho(){
         $(".menu li").css("font-size", parseFloat($(".menu li").css("font-size"))-1)
         $(".menuMobile li").css("font-size", parseFloat($(".menuMobile li").css("font-size"))-1)
         $(".textoApresentacao p, .textoApresentacao a").css("font-size", parseFloat($(".textoApresentacao p").css("font-size"))-1)
-        $(".sobre h2, .habilidades h2").css("font-size", parseFloat($(".sobre h2").css("font-size"))-1)
-        $(".sobre p").css("font-size", parseFloat($(".sobre p").css("font-size"))-1)
-    })
+        $(".sobre h2, .habilidades h2, .projetos h2").css("font-size", parseFloat($(".sobre h2").css("font-size"))-1)
+        $(".sobre p, .areaText p, .card p").css("font-size", parseFloat($(".sobre p").css("font-size"))-1)})
     $(".fa-plus").click(()=>{
         $(".icons").css("font-size", parseFloat($(".icons").css("font-size"))+1)
         $(".menu li").css("font-size", parseFloat($(".menu li").css("font-size"))+1)
         $(".menuMobile li").css("font-size", parseFloat($(".menuMobile li").css("font-size"))+1)
         $(".textoApresentacao p, .textoApresentacao a").css("font-size", parseFloat($(".textoApresentacao p").css("font-size"))+1)
-        $(".sobre h2, .habilidades h2").css("font-size", parseFloat($(".sobre h2").css("font-size"))+1)
-        $(".sobre p").css("font-size", parseFloat($(".sobre p").css("font-size"))+1)
+        $(".sobre h2, .habilidades h2, .projetos h2").css("font-size", parseFloat($(".sobre h2").css("font-size"))+1)
+        $(".sobre p, .areaText p, .card p").css("font-size", parseFloat($(".sobre p").css("font-size"))+1)
     })
 }
 
@@ -46,6 +47,7 @@ function trocaCor(){
         $(".cls-5, .cls-9").css("fill", "#6594f8")
         $(".cls-36").css("fill", whiteColor);
         $(".card").css(background, whiteColor)
+        $(".card p").css("color", blackColor)
         sunMoon = $(".fa-sun")
         sunMoon.click(()=>{
             sunMoon.removeClass("fa-sun")
@@ -58,6 +60,7 @@ function trocaCor(){
             $(".cls-5, .cls-9").css("fill", "#ffce44")
             $(".cls-36").css("fill", blackColor);
             $(".card").css(background, "inherit")
+            $(".card p").css("color", blackColor)
             sunMoon = $(".fa-moon")
             trocaCor()
         })
@@ -65,15 +68,15 @@ function trocaCor(){
 }
 
 setInterval(() => {
+    const fecharMobile = ()=> mobile.css({"top":"-700%"})
     width = $(window).width();
     height = $(window).height();
     menu.click(function(){
         mobile.css({"width":width,"height":height})
         mobile.css({"top":"0%"})
     })
-    close.click(function(){
-        mobile.css({"top":"-700%"})
-    })    
+    itensMobile.click(()=>fecharMobile())
+    close.click(()=>fecharMobile()) 
 }, 700);
 
 setTimeout(function(){
