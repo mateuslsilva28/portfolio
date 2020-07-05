@@ -35,6 +35,9 @@ function alteraTamanho(){
     })
 }
 
+console.log($(".footer1").css("height"))
+
+console.log($(".footer1").css("background-image"))
 function trocaCor(){
     sunMoon.click(()=>{
         sunMoon.removeClass("fa-moon")
@@ -47,12 +50,14 @@ function trocaCor(){
         $(".cls-5, .cls-9").css("fill", "#6594f8")
         $(".cls-36").css("fill", whiteColor);
         $(".card").css(background, whiteColor)
-        $(".card p").css("color", blackColor)
+        $(".card p, .jobMe p, .jobMe h2").css("color", blackColor)
+        $(".footer1").css("background-image", "linear-gradient(rgb(0, 0, 0) 50%, rgb(37, 160, 217) 50%)")
+        console.log($(".footer1").css("background-image"))
         sunMoon = $(".fa-sun")
         sunMoon.click(()=>{
             sunMoon.removeClass("fa-sun")
             sunMoon.addClass("fa-moon")
-            $("body").css({background:whiteColor, "color":blackColor})
+            $("body").css({background:"#edf2f5", "color":blackColor})
             $("header").css({background: whiteColor,"box-shadow":"1px 1px 4px 1px rgba(0,0,0,0.1)"})
             $(".logo").attr("src", "imagens/logoPreta.webp")
             $("li").css("color", blackColor)
@@ -60,7 +65,7 @@ function trocaCor(){
             $(".cls-5, .cls-9").css("fill", "#ffce44")
             $(".cls-36").css("fill", blackColor);
             $(".card").css(background, "inherit")
-            $(".card p").css("color", blackColor)
+            $(".footer1").css("background-image", "linear-gradient(rgb(237, 242, 245) 50%, rgb(37, 160, 217) 50%)")
             sunMoon = $(".fa-moon")
             trocaCor()
         })

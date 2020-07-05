@@ -5,14 +5,22 @@ body{
     padding:0;
     font-family: 'Maven Pro';
     overflow-x: hidden;
+    background-color: #edf2f5;
 }
 
 a{text-decoration: none; color: inherit;}
 ul{margin: -5px 0 0 0;}
-li {list-style: none;}
+li {list-style: none;
+    display: inline;}
 i{cursor:pointer}
 
-#topo {
+#topo{
+    position:fixed;
+    z-index:1;
+    background-color: white;
+}
+
+#topo, .direitos {
     width: 96%;
     height: 100px;
     display: flex;
@@ -20,9 +28,6 @@ i{cursor:pointer}
     align-items: center;
     box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.1);
     padding: 1% 2%;
-    position: fixed;
-    z-index: 1;
-    background-color: white;
 }
 aside{
     position: fixed;
@@ -47,9 +52,9 @@ aside i{
     align-items: center;
 }
 
+
 .menu li{
     transition: all 0.4s linear;
-    display: inline;
     margin: 0 5px;
     font-weight: 400;
     color: rgb(71, 71, 71);
@@ -79,6 +84,10 @@ aside i{
     justify-content: space-between;
     transition: all 1s linear;
 }
+.menuMobile ul{
+    display: flex;
+    flex-direction: column;
+}
 .menuMobile li {
     text-align: center;
     font-family: "Maven Pro";
@@ -94,7 +103,7 @@ aside i{
 }
 
 .menuMobile img{
-    width: 70%;
+    width: 50%;
     -webkit-animation: infinite alternate logo 2500ms;
 }
 .menuMobile .close{
@@ -136,7 +145,7 @@ main{
     transition: all 1s linear;
 }
 
-.textoApresentacao a{
+.btnAzul{
     background: linear-gradient(118.1deg, #26a0d9 -2.02%, #13F1FC 129.72%);
     padding: 5%;
     color: white;
@@ -144,7 +153,7 @@ main{
     border-radius: 10px;
 }
 
-.textoApresentacao a:before{
+.btnAzul:before{
     border-radius: inherit;
 	display: block;
 	content: '';
@@ -156,7 +165,7 @@ main{
 	transform: translate(-25%, -25%);
 	z-index: 0;
 }
-.textoApresentacao a:after{
+.btnAzul:after{
 	display: block;
 	margin: 6px;
 	background-size: cover;
@@ -166,15 +175,14 @@ main{
 	z-index: 1;
 }
 
-.textoApresentacao div{
+.caixaBotao{
     transition: all 0.4s linear;
     -webkit-animation: botao 600ms alternate infinite ease;
     -moz-animation: botao 600ms alternate infinite ease;
 }
 
-.textoApresentacao div:hover{transform: scale(1.1);}
-
-.textoApresentacao a:hover {background: linear-gradient(118.1deg, #13F1FC -2.02%, #26a0d9 129.72%);}
+.caixaBotao:hover{transform: scale(1.1);}
+.btnAzul:hover {background: linear-gradient(118.1deg, #13F1FC -2.02%, #26a0d9 129.72%);}
 
 #minhaApresentacao{
     width: 30%;
@@ -202,13 +210,10 @@ main{
 .iconsColoridos a:nth-child(3):hover i{color: inherit;}
 .iconsColoridos a:hover i{color: #2bd247;}
 
-#sobre, #habilidades, #projetos{
-    padding: 0 2%;
-    font-size:1.3em;
-}
-#sobre h2, #habilidades, #projetos h2{
-    text-align: center;
-}
+#sobre, #habilidades, #projetos, #contato{font-size:1.3em;}
+#sobre, #habilidades, #projetos{padding: 0 2%;}
+#sobre h2, #habilidades, #projetos h2{text-align: center;}
+
 .containerCards{
     width: 100%;
     display: flex;
@@ -242,9 +247,13 @@ main{
 .containerCards .cardImagens{ width: 100%;}
 .containerCards .cardImagens img{width: 31%;}
 
+.projetos{
+    height: auto;
+}
+
 .gridProjetos{
     width: 100%;
-    height: 700px;
+    height: auto;
     display: grid;
     justify-content: start;
     grid-template-columns: 1fr 1fr;
@@ -253,6 +262,7 @@ main{
 .cardProjeto{
     position: relative;
     width: 90%;
+    height: 400px;
     translate: (-50%,-50%);
     margin: 10px;
     overflow: hidden;
@@ -269,7 +279,7 @@ main{
 }
 .cardProjeto:nth-of-type(1) .areaImg{background-image: url("../imagens/projetos/1.webp");}
 .cardProjeto:nth-of-type(2) .areaImg{background-image: url("../imagens/projetos/2.webp");}
-.cardProjeto:nth-of-type(3) .areaImg{background-image: url("../imagens/projetos/3.webp");}
+.cardProjeto:nth-of-type(3) .areaImg{background-image: url("../imagens/projetos/3.webp"); background-position: top center;}
 .cardProjeto:nth-of-type(4) .areaImg{background-image: url("../imagens/projetos/4.webp");}
 .areaImg{
     background-size: cover;
@@ -298,6 +308,50 @@ main{
     top: 0;
     left:0;
     transition: 1.8s;
+}
+
+footer{
+    margin:50px 0;
+    height:auto;
+    display: flex;
+    padding: 0 5%;
+    justify-content: space-between;
+}
+
+.rodapeEsquerda{
+    height: auto;
+    width:40%;
+    display: flex;
+    flex-direction:  column;
+    justify-content: space-around;
+}
+
+.rodapeDireita{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.rodapeDireita form{
+    text-align:center;
+    width: 70%;
+    font-size:140%
+}
+
+.rodapeDireita input[type=text], .rodapeDireita textarea{
+    display: block;
+    width: 100%;
+    padding: 5% 2%;
+    margin: 10px 0;
+}
+
+[type=button]{border:none}
+
+textarea{
+    margin-bottom:30px!important;
+}
+
+#copyright{
+    text-align:center;
 }
 
 @-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
@@ -356,5 +410,23 @@ main{
     #minhaApresentacao{
         width: 80%;
         margin-top: 30px;
+    }
+
+    footer{
+        flex-direction:column;
+        align-items:center;
+        text-align: center;
+    }
+    .rodapeEsquerda{
+        width:80%;
+        margin: 0 0 50px 0;
+    }
+
+    #encerramento{
+        margin: 40px 0;
+    }
+    
+    .rodapeDireita{
+        width: 90%;
     }
 }
