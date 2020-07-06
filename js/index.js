@@ -34,10 +34,6 @@ function alteraTamanho(){
         $(".sobre p, .areaText p, .card p").css("font-size", parseFloat($(".sobre p").css("font-size"))+1)
     })
 }
-
-console.log($(".footer1").css("height"))
-
-console.log($(".footer1").css("background-image"))
 function trocaCor(){
     sunMoon.click(()=>{
         sunMoon.removeClass("fa-moon")
@@ -52,7 +48,6 @@ function trocaCor(){
         $(".card").css(background, whiteColor)
         $(".card p, .jobMe p, .jobMe h2").css("color", blackColor)
         $(".footer1").css("background-image", "linear-gradient(rgb(0, 0, 0) 50%, rgb(37, 160, 217) 50%)")
-        console.log($(".footer1").css("background-image"))
         sunMoon = $(".fa-sun")
         sunMoon.click(()=>{
             sunMoon.removeClass("fa-sun")

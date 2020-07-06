@@ -151,6 +151,7 @@ main{
     color: white;
     transition: all 1s linear;
     border-radius: 10px;
+    max-width:320px;
 }
 
 .btnAzul:before{
@@ -334,7 +335,9 @@ footer{
 .rodapeDireita form{
     text-align:center;
     width: 70%;
-    font-size:140%
+}
+form p{
+    font-size: 140%;
 }
 
 .rodapeDireita input[type=text], .rodapeDireita textarea{
@@ -427,6 +430,9 @@ textarea{
     }
     
     .rodapeDireita{
-        width: 90%;
+        width: 97%;
+    }
+    .rodapeDireita form{
+        width:90%
     }
 }
