@@ -24,14 +24,16 @@ function alteraTamanho(){
         $(".menuMobile li").css("font-size", parseFloat($(".menuMobile li").css("font-size"))-1)
         $(".textoApresentacao p, .textoApresentacao a").css("font-size", parseFloat($(".textoApresentacao p").css("font-size"))-1)
         $(".sobre h2, .habilidades h2, .projetos h2").css("font-size", parseFloat($(".sobre h2").css("font-size"))-1)
-        $(".sobre p, .areaText p, .card p").css("font-size", parseFloat($(".sobre p").css("font-size"))-1)})
+        $(".sobre p, .areaText p, .card p, footer p").css("font-size", parseFloat($(".sobre p").css("font-size"))-1)
+        $(".rodapeDireita p").css("font-size", parseFloat($(".rodapeDireita p").css("font-size"))-1)
+    })
     $(".fa-plus").click(()=>{
         $(".icons").css("font-size", parseFloat($(".icons").css("font-size"))+1)
         $(".menu li").css("font-size", parseFloat($(".menu li").css("font-size"))+1)
         $(".menuMobile li").css("font-size", parseFloat($(".menuMobile li").css("font-size"))+1)
         $(".textoApresentacao p, .textoApresentacao a").css("font-size", parseFloat($(".textoApresentacao p").css("font-size"))+1)
         $(".sobre h2, .habilidades h2, .projetos h2").css("font-size", parseFloat($(".sobre h2").css("font-size"))+1)
-        $(".sobre p, .areaText p, .card p").css("font-size", parseFloat($(".sobre p").css("font-size"))+1)
+        $(".sobre p, .areaText p, .card p, footer p").css("font-size", parseFloat($(".sobre p").css("font-size"))+1)
     })
 }
 function trocaCor(){
