@@ -212,7 +212,7 @@ main{
 .iconsColoridos a:hover i{color: #2bd247;}
 
 #sobre, #habilidades, #projetos, #contato{font-size:1.3em;}
-#sobre, #habilidades, #projetos{padding: 0 2%;}
+#sobre, #habilidades, #projetos{padding: 0 1%;}
 #sobre h2, #habilidades, #projetos h2{text-align: center;}
 
 .containerCards{
@@ -223,11 +223,14 @@ main{
     height: auto;
     position: relative;
     left: -120%;
-    transition: all 1.2s linear!important;
+    transition: left 1.2s linear;
 }
 .containerCards div h2{color: #26a0d9;}
 
-.containerCards p{text-align:center}
+.containerCards p{
+    text-align:center;
+    transition: none;
+}
 
 .containerCards .card{
     width: 33%;
@@ -236,17 +239,20 @@ main{
 }
 
 .containerCards .card, .cardProjeto{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
     transition: all 0.4s linear;
 }
 
 .containerCards .card:hover{
-    box-shadow: 2px 3px 15px #26a0d9;
+    box-shadow: 0 0 15px #26a0d9;
     transition: all 0.4s linear;
 }
 
 .containerCards .cardImagens{ width: 100%;}
-.containerCards .cardImagens img{width: 31%;}
+.containerCards .cardImagens img, .cardImagens svg{
+    width: 31%!important;
+    height: 31%!important;
+}
 
 .projetos{
     height: auto;
@@ -392,9 +398,10 @@ textarea{
         flex-direction: column;
         align-items: center;
     }
-    .cardImagens img{
+    .cardImagens img, .cardImagens svg{
         width: 55%!important;
     }
+    
 }
 
 @media (max-width:767px){

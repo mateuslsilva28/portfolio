@@ -45,9 +45,8 @@ function trocaCor(){
         $("li").css("color", whiteColor)
         $(".menuMobile").css(background, blackColor)
         $(".cls-5, .cls-9").css("fill", "#6594f8")
-        $(".cls-36").css("fill", whiteColor);
-        $(".card").css(background, whiteColor)
-        $(".card p, .jobMe p, .jobMe h2").css("color", blackColor)
+        $(".cls-36, svg #texto").css("fill", whiteColor);
+        $("#sqlserver").attr("src", "imagens/linguagens/sqlserverbranco.webp")
         $(".footer1").css("background-image", "linear-gradient(rgb(0, 0, 0) 50%, rgb(37, 160, 217) 50%)")
         sunMoon = $(".fa-sun")
         sunMoon.click(()=>{
@@ -59,8 +58,9 @@ function trocaCor(){
             $("li").css("color", blackColor)
             $('.menuMobile').css(background, "inherit")
             $(".cls-5, .cls-9").css("fill", "#ffce44")
-            $(".cls-36").css("fill", blackColor);
-            $(".card").css(background, "inherit")
+            $(".cls-36, svg #texto").css("fill", blackColor);
+            $("#sqlserver").attr("src", "imagens/linguagens/sqlserverpreto.webp")
+            $(".card p").css("color", "inherit")
             $(".footer1").css("background-image", "linear-gradient(rgb(237, 242, 245) 50%, rgb(37, 160, 217) 50%)")
             sunMoon = $(".fa-moon")
             trocaCor()
@@ -80,14 +80,12 @@ setInterval(() => {
     close.click(()=>fecharMobile()) 
 }, 700);
 
-setTimeout(function(){
-    $(".textoApresentacao").css("top", "0")
-}, 400)
+setTimeout(()=> $(".textoApresentacao").css("top", "0"), 400)
 
 setInterval(function(){
     var posicao = $(window).scrollTop()
     if(posicao > 258)ilustracao1.css("left", "-50%")
-    else setTimeout(function(){
+    else setTimeout( function(){
         ilustracao1.css("left", "0%")
     }, 600) 
     if(posicao>330) cards.css({"left":"0%"})
