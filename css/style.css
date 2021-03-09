@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Maven Pro';
+    overflow-x: hidden;
+    background-color: #edf2f5;
+}
+
+a{text-decoration: none; color: inherit;}
+ul{margin: -5px 0 0 0;}
+li {list-style: none;
+    display: inline;}
+i{cursor:pointer}
+
+#topo{
+    position:fixed;
+    z-index:1;
+    background-color: white;
+}
+
+#topo, .direitos {
+    width: 96%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.1);
+    padding: 1% 2%;
+}
+aside{
+    position: fixed;
+    top: 40%;
+    right: 0.2%;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+aside i{
+    margin: 10px 0;
+}
+
+.logo{height: 80px;}
+
+.logo img{height: 100%;}
+
+.menu {
+    font-family: 'Maven Pro', sans-serif;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+
+.menu li{
+    transition: all 0.4s linear;
+    margin: 0 5px;
+    font-weight: 400;
+    color: rgb(71, 71, 71);
+    font-size: 1.2em;
+}
+
+.menu li:hover{
+    color: #26a0d9;
+    font-size: 1.3em;
+    transition: all 0.4s linear;
+}
+.menu .icons{margin:15px 0 15px 0}
+
+.aumentaDiminui{display: none;}
+
+.hamburguer{display: none!important;}
+
+.menuMobile{
+    background-color: #fdfcfc;
+    position: absolute;
+    z-index: 10;
+    top:-700%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 1s linear;
+}
+.menuMobile ul{
+    display: flex;
+    flex-direction: column;
+}
+.menuMobile li {
+    text-align: center;
+    font-family: "Maven Pro";
+    font-size: 1.7em;
+    margin: 5% 0;
+    transition: all 0.4s linear;
+}
+
+.menuMobile li:hover{
+    color: #26a0d9;
+    font-size: 1.9em;
+    transition: all 0.4s linear;
+}
+
+.menuMobile img{
+    width: 50%;
+    -webkit-animation: infinite alternate logo 2500ms;
+}
+.menuMobile .close{
+    align-self: flex-end;
+    position: relative;
+    right: 3%;
+    top:3%;
+    cursor: pointer;
+}
+
+main{
+    position: relative;
+    top: 100px;
+}
+
+.apresentacao{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 1%;
+}
+
+#imgApresentacao{
+    width: 35%;
+    position: relative;
+    left:-50%;
+    transition: all 1s linear;
+}
+
+#imgApresentacao img{width:100%}
+
+.textoApresentacao{
+    font-family: "Maven Pro";
+    font-weight: 500;
+    font-size: 1.5em;
+    position: relative;
+    top:-250px;
+    text-align: center;
+    transition: all 1s linear;
+}
+
+.btnAzul{
+    background: linear-gradient(118.1deg, #26a0d9 -2.02%, #13F1FC 129.72%);
+    padding: 5%;
+    color: white;
+    transition: all 1s linear;
+    border-radius: 10px;
+    max-width:320px;
+}
+
+.btnAzul:before{
+    border-radius: inherit;
+	display: block;
+	content: '';
+    position: absolute;
+    top: 85px;
+    left: 4px;
+	background: linear-gradient(135deg, #21d4fd 25%, #26a0d9 75%);	
+	transition: all 1s;
+	transform: translate(-25%, -25%);
+	z-index: 0;
+}
+.btnAzul:after{
+	display: block;
+	margin: 6px;
+	background-size: cover;
+	content: '';
+	position: absolute;
+	top: 0; left: 0;
+	z-index: 1;
+}
+
+.caixaBotao{
+    transition: all 0.4s linear;
+    -webkit-animation: botao 600ms alternate infinite ease;
+    -moz-animation: botao 600ms alternate infinite ease;
+}
+
+.caixaBotao:hover{transform: scale(1.1);}
+.btnAzul:hover {background: linear-gradient(118.1deg, #13F1FC -2.02%, #26a0d9 129.72%);}
+
+#minhaApresentacao{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#minhaApresentacao img{
+    width: 80%;
+    border-radius: 100%;
+}
+#minhaApresentacao .icons{margin-top: 5px;}
+
+.icons i{
+    margin: 0 5px;
+    transition: all 0.4s linear;
+}
+.icons i:hover{    
+    -webkit-animation: icones 600ms alternate infinite ease;
+    -moz-animation: icones 600ms alternate infinite ease;
+}
+.iconsColoridos a:first-of-type:hover i, .iconsColoridos a:last-of-type:hover i{color: #4267db;}
+.iconsColoridos a:nth-child(3):hover i{color: inherit;}
+.iconsColoridos a:hover i{color: #2bd247;}
+
+#sobre, #habilidades, #projetos, #contato{font-size:1.3em;}
+#sobre, #habilidades, #projetos{padding: 0 1%;}
+#sobre h2, #habilidades, #projetos h2{text-align: center;}
+
+.containerCards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size:1.1em;
+    height: auto;
+    position: relative;
+    left: -120%;
+    transition: left 1.2s linear;
+}
+.containerCards div h2{color: #26a0d9;}
+
+.containerCards p{
+    text-align:center;
+    transition: none;
+}
+
+.containerCards .card{
+    width: 33%;
+    font-size: 0.8em;
+    margin: 0 15px;
+}
+
+.containerCards .card, .cardProjeto{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.4s linear;
+}
+
+.containerCards .card:hover{
+    box-shadow: 0 0 15px #26a0d9;
+    transition: all 0.4s linear;
+}
+
+.containerCards .cardImagens{ width: 100%;}
+.containerCards .cardImagens img, .cardImagens svg{
+    width: 31%!important;
+    height: 31%!important;
+}
+
+.projetos{
+    height: auto;
+}
+
+.gridProjetos{
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cardProjeto{
+    position: relative;
+    width: 90%;
+    height: 400px;
+    translate: (-50%,-50%);
+    margin: 10px;
+    overflow: hidden;
+}
+
+.areaImg, .areaText{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    transition: 1.8s;
+}
+.cardProjeto:nth-of-type(1) .areaImg{background-image: url("../imagens/projetos/1.webp");}
+.cardProjeto:nth-of-type(2) .areaImg{background-image: url("../imagens/projetos/2.webp");}
+.cardProjeto:nth-of-type(3) .areaImg{background-image: url("../imagens/projetos/3.webp"); background-position: top center;}
+.cardProjeto:nth-of-type(4) .areaImg{background-image: url("../imagens/projetos/4.webp");}
+.areaImg{
+    background-size: cover;
+    background-position: top left;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.areaText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background: linear-gradient(to top, #26a0d9 -2.02%, #13F1FC 129.72%);
+    top:0;
+    left: 100%;
+    padding:10px;
+    color: #fdfcfc;
+}
+
+.cardProjeto:hover .areaImg{
+    top:0;
+    left:-100%;
+    transition: 1.8s;
+}
+.cardProjeto:hover .areaText{
+    top: 0;
+    left:0;
+    transition: 1.8s;
+}
+
+footer{
+    margin:50px 0;
+    height:auto;
+    display: flex;
+    padding: 0 5%;
+    justify-content: space-between;
+}
+
+.rodapeEsquerda{
+    height: auto;
+    width:40%;
+    display: flex;
+    flex-direction:  column;
+    justify-content: space-around;
+}
+
+.rodapeDireita{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.rodapeDireita form{
+    text-align:center;
+    width: 70%;
+}
+form p{
+    font-size: 140%;
+}
+
+.rodapeDireita input[type=text], .rodapeDireita textarea{
+    display: block;
+    width: 100%;
+    padding: 5% 2%;
+    margin: 10px 0;
+}
+
+[type=button]{border:none}
+
+textarea{
+    margin-bottom:30px!important;
+}
+
+#copyright{
+    text-align:center;
+}
+
+@-webkit-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+@-moz-keyframes icones{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+@-webkit-keyframes botao{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+@-moz-keyframes botao{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.2);}}
+@-webkit-keyframes logo{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.1);}}
+@-moz-keyframes logo{from {-webkit-transform: scale((1));}to {-webkit-transform: scale(1.1);}}
+
+/*Media Queries*/
+@media (max-width:900px){
+    .gridProjetos{
+        grid-template-columns: 1fr;
+    }
+    .cardProjeto{
+        width: 96%;
+        height: 400px;
+        margin: 50px 0;
+    }
+}
+@media (max-width:800px){
+    .containerCards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 80%!important;
+        margin: 10px 0!important;
+    }
+}
+
+@media (max-width:500px){
+    .cardImagens{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cardImagens img, .cardImagens svg{
+        width: 55%!important;
+    }
+    
+}
+
+@media (max-width:767px){
+    .menu{display: none;}
+    .hamburguer{display: flex!important;}
+}
+
+@media (max-width:700px){
+    .apresentacao{
+        flex-direction: column;
+        align-items: center;
+    }
+    #imgApresentacao{
+        display: none;
+    }   
+    #minhaApresentacao{
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    footer{
+        flex-direction:column;
+        align-items:center;
+        text-align: center;
+    }
+    .rodapeEsquerda{
+        width:80%;
+        margin: 0 0 50px 0;
+    }
+
+    #encerramento{
+        margin: 40px 0;
+    }
+    
+    .rodapeDireita{
+        width: 97%;
+    }
+    .rodapeDireita form{
+        width:90%
+    }
+}
